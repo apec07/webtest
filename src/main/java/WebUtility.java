@@ -23,13 +23,14 @@ public class WebUtility {
 	  public WebDriver launchChrome() {
 	        try {
 	        	//load webdriver
-	            System.setProperty("webdriver.chrome.driver", "C:\\Users\\Chen\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+	            System.setProperty("webdriver.chrome.driver", "/home/chen/Downloads/chromedriver-linux64/chromedriver");
 	            
 	            ChromeOptions options = new ChromeOptions();
 	            // options.addArguments("disable-infobars");
 	            
-	            // set the path to the Chrome executable 
-	            options.setBinary("C:\\Users\\Chen\\Downloads\\chrome-win64\\chrome-win64\\chrome.exe");
+	            // set the path to the Chrome executable
+	            options.setBinary("/home/chen/Downloads/chrome-linux64/chrome");
+	            options.addArguments("--no-sandbox");
 	            driver = new ChromeDriver(options);
 	            driver.get("https://www.yahoo.com");
 
