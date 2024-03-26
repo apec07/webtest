@@ -9,9 +9,9 @@ public class ChromeTest {
 		WebUtility web = WebUtility.getInstance(); 
 		web.launchChrome();
 		Thread.sleep(5000);
-		web.switchTab(10);
-		Thread.sleep(5000);
-		web.closeChrome();
+		web.searchInput("Hello Tools");
+//		Thread.sleep(5000);
+//		web.closeChrome();
 	}
 
 }

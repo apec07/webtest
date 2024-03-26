@@ -39,6 +39,31 @@ public class WebUtility {
 	            return null; // or handle the exception appropriately
 	        }
 	  }
+	  
+	public void searchInput(String str) throws InterruptedException {
+			
+			Thread.sleep(1500);
+			WebElement element = driver.findElement(By.cssSelector("input"));
+			element.sendKeys(str);
+			element.submit();
+	
+	}
+	
+	public void loginYahoo(String account,String password) throws InterruptedException {
+		
+		Thread.sleep(1500);
+		
+		WebElement element = driver.findElement(By.cssSelector("input"));
+		//first login - 
+		element.sendKeys(account);
+		
+		
+		//after first login
+
+}
+
+	
+	
 	public void tapMenu() {
 		
 		list = driver.findElements(By.className("btn-menu"));
@@ -71,7 +96,7 @@ public class WebUtility {
 		}
 	
 	}
-	
+
 	public void closeChrome() {
 		driver.close();
 	}
